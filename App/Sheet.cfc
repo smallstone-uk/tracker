@@ -69,4 +69,14 @@ component extends = "Framework.Model"
 
         return decimalFormat(total);
     }
+
+    /**
+     * Gets the project the sheet belongs to.
+     *
+     * @return any
+     */
+    public any function project()
+    {
+        return this.belongsToOne('Project', 'projectID');
+    }
 }

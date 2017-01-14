@@ -1,4 +1,5 @@
 <cftry>
+    <cfset project = sheet.project()>
     <cfset invoiceIndex = sheet.nextInvoiceNumber()>
     <cfset publishDir = getDataDir('/invoices/#sheet.id#', true)>
     <cfset publishPath = getDataDir('/invoices/#sheet.id#/#invoiceIndex#.pdf')>
@@ -35,37 +36,37 @@
 
                             <table width="100%" border="0">
                                 <tr>
-                                    <td>Kingsley Computer Consultants Ltd</td>
+                                    <td>#project.company#</td>
                                     <td>&nbsp;</td>
                                 </tr>
 
                                 <tr>
-                                    <td>5 Fir Close</td>
+                                    <td>#project.address1#</td>
                                     <td>&nbsp;</td>
                                 </tr>
 
                                 <tr>
-                                    <td>Goonhavern</td>
+                                    <td>#project.address2#</td>
                                     <td>&nbsp;</td>
                                 </tr>
 
                                 <tr>
-                                    <td>Truro</td>
+                                    <td>#project.city#</td>
                                     <td>&nbsp;</td>
                                 </tr>
 
                                 <tr>
-                                    <td>Cornwall</td>
+                                    <td>#project.county#</td>
                                     <td>&nbsp;</td>
                                 </tr>
 
                                 <tr>
-                                    <td>TR4 9QN</td>
+                                    <td>#project.postcode#</td>
                                     <td>&nbsp;</td>
                                 </tr>
 
                                 <tr>
-                                    <td>United Kingdom</td>
+                                    <td>#project.country#</td>
                                     <td>&nbsp;</td>
                                 </tr>
 
