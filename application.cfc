@@ -19,10 +19,6 @@ component
             'migrationTableName' = 'migrations'
         };
 
-        // Load the config into application
-        var config = (fileExists(getBaseDir('app.json'))) ? deserializeJSON(fileRead(getBaseDir('app.json'))) : {};
-        for (key in config) { application[key] = config[key]; }
-
         return true;
     }
 
@@ -30,18 +26,13 @@ component
     {
         if (structKeyExists(url, 'restart')) {
             onApplicationStart();
-            writeDumpToFile(application);
         }
-    }
 
-    public any function onSessionStart()
-    {
-        session.started = now();
-        session.user = {};
+        new web();
     }
 
     public any function onRequest(required string thePage)
     {
-        include thePage;
+        route().handle(thePage);
     }
 }

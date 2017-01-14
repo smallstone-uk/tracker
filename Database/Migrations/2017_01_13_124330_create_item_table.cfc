@@ -11,10 +11,10 @@ component
 
         table.increments('id');
         table.timestamps();
-        table.integer('header').index();
+        table.integer('sheet').index();
         table.decimal('duration', 10, 2).default(0.00);
         table.longText('comment').nullable();
-        table.foreign('header').references('headers', 'id').onDelete('cascade');
+        table.foreign('sheet').references('sheets', 'id').onDelete('cascade');
 
         table.create();
     }

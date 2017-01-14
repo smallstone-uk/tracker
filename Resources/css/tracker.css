@@ -27,3 +27,7 @@
 .ml-3 {margin-left: 1.5rem;}
 .ml-4 {margin-left: 2rem;}
 .ml-5 {margin-left: 2.5rem;}
+
+* {outline: 0 !important;}
+
+.btn-icon {padding: 6px 10px;}

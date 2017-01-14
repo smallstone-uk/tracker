@@ -1,7 +1,7 @@
 component extends = "Framework.Model"
 {
-    variables.table = "headers";
-    variables.model = "Header";
+    variables.table = "sheets";
+    variables.model = "Sheet";
 
     /**
      * Called when a header is deleted.
@@ -16,13 +16,26 @@ component extends = "Framework.Model"
     }
 
     /**
+     * Gets the next invoice number.
+     *
+     * @return any
+     */
+    public any function nextInvoiceNumber()
+    {
+        var n = this.invoiceNo + 1;
+        this.invoiceNo += 1;
+        this.save();
+        return n;
+    }
+
+    /**
      * Gets all items associated with this header.
      *
      * @return array
      */
     public array function items()
     {
-        return this.hasMany('Item', 'id', 'header');
+        return this.hasMany('Item', 'id', 'sheet');
     }
 
     /**

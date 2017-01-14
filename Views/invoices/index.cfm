@@ -1,8 +1,8 @@
 <cftry>
-    <cfset invoiceIndex = getTimestamp()>
-    <cfset publishDir = getDataDir('/invoices/#header.id#', true)>
-    <cfset publishPath = getDataDir('/invoices/#header.id#/#invoiceIndex#.pdf')>
-    <cfset rate = (hideEmployee) ? header.clientRate : header.employeeRate>
+    <cfset invoiceIndex = sheet.nextInvoiceNumber()>
+    <cfset publishDir = getDataDir('/invoices/#sheet.id#', true)>
+    <cfset publishPath = getDataDir('/invoices/#sheet.id#/#invoiceIndex#.pdf')>
+    <cfset rate = (hideEmployee) ? sheet.clientRate : sheet.employeeRate>
 
     <cfoutput>
         <cfdocument 
@@ -90,7 +90,7 @@
                                 <tr>
                                     <td align="left">
                                         <strong>SHEET:</strong>
-                                        #header.title#
+                                        #sheet.title#
                                     </td>
 
                                     <td align="right">
@@ -117,7 +117,7 @@
                                 </thead>
 
                                 <tbody>
-                                    <cfloop array="#header.items()#" index="item">
+                                    <cfloop array="#sheet.items()#" index="item">
                                         <tr>
                                             <td colspan="3">#item.comment#</td>
                                             <td align="right">#item.durationInHours()#</td>
@@ -143,9 +143,9 @@
                                         <td align="right">
                                             <strong>
                                                 <cfif hideEmployee>
-                                                    &pound;#decimalFormat(header.clientTotal())#
+                                                    &pound;#decimalFormat(sheet.clientTotal())#
                                                 <cfelse>
-                                                    &pound;#decimalFormat(header.employeeTotal())#
+                                                    &pound;#decimalFormat(sheet.employeeTotal())#
                                                 </cfif>
                                             </strong>
                                         </td>
@@ -158,7 +158,7 @@
             </cfoutput>
         </cfdocument>
 
-        #getUrl('/data/invoices/#header.id#/#invoiceIndex#.pdf')#
+        #getUrl('/data/invoices/#sheet.id#/#invoiceIndex#.pdf')#
     </cfoutput>
 
     <cfcatch type="any">

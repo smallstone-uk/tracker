@@ -20,6 +20,6 @@ component extends = "Framework.Model"
      */
     public any function getHeader()
     {
-        return this.belongsToOne('Header', 'header');
+        return this.belongsToOne('Sheet', 'sheet');
     }
 }
