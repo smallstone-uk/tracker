@@ -39,11 +39,7 @@
     </cfif>
     
     <h2 class="mb-3">
-        <cfif linkTitle>
-            <a href="#getUrl('/project/#project.id#')#" style="text-decoration: none">#project.name#</a>
-        <cfelse>
-            #project.name#
-        </cfif>
+        #project.name#
 
         <cfif NOT hideControls>
             <button

@@ -16,7 +16,9 @@ component extends = "App.Framework.Controller"
 
         return view('layouts.index|project.index', {
             'title' = project.name,
-            'project' = project
+            'project' = project,
+            'hideControls' = false,
+            'linkTitle' = false
         });
     }
 
@@ -31,7 +33,8 @@ component extends = "App.Framework.Controller"
         
         return view('sheets.list', {
             'project' = project,
-            'sheets' = project.sheets()
+            'sheets' = project.sheets(),
+            'hideControls' = false
         });
     }
 }

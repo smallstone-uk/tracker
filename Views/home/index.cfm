@@ -1,3 +1,9 @@
 <cfoutput>
-    <h2 class="mb-3">Home</h2>
+    <cfloop array="#new App.Project().latest(10)#" index="p">
+        <cfset view('project.index', {
+            'project' = p,
+            'hideControls' = true,
+            'linkTitle' = true
+        })>
+    </cfloop>
 </cfoutput>

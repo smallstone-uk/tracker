@@ -40,7 +40,7 @@
     
     <h2 class="mb-3">
         <cfif linkTitle>
-            <a href="#getUrl('/project/#project.id#')#" style="text-decoration: none">#project.name#</a>
+            <a href="#getUrl('/project/#project.id#')#">#project.name#</a>
         <cfelse>
             #project.name#
         </cfif>
