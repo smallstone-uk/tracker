@@ -1,4 +1,4 @@
-component extends = "App.Framework.Application"
+component extends = "App.Framework.App"
 {
     this.name = "TimeTracker";
     this.sessionManagement = true;
