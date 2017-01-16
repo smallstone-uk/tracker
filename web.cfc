@@ -7,5 +7,7 @@ component
 
         // Project page
         route().get('/project/{id}', 'ProjectController@index');
+
+        route().get('/user', 'user.index');
     }
 }
