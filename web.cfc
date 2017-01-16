@@ -2,12 +2,12 @@ component
 {
     public any function init()
     {
-        // Homepage
-        route().get('/', 'CommonController@index');
+        route().middleware('user')
+            .get('/settings', 'user.settings');
 
-        // Project page
-        route().get('/project/{id}', 'ProjectController@index');
-
-        route().get('/user', 'user.index');
+        route()
+            .get('/', 'CommonController@index')
+            .get('/project/{id}', 'ProjectController@index')
+            .get('/user', 'user.index');
     }
 }
