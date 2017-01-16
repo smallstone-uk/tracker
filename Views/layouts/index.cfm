@@ -1,3 +1,10 @@
+<cfscript>
+    // user = new App.User(1);
+    // auth().login(user);
+    writeDump(session);
+    writeDump(auth().guest());
+</cfscript>
+
 <cfoutput>
     <!DOCTYPE html>
     <html>
