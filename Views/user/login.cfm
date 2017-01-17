@@ -10,12 +10,12 @@
                     <div class="modal-body">
                         <div class="form-group label-floating">
                             <label class="control-label" for="username">Username</label>
-                            <input type="text" class="form-control" id="username" name="username" value="Kingsley">
+                            <input type="text" class="form-control" id="username" name="username">
                         </div>
 
                         <div class="form-group label-floating">
                             <label class="control-label" for="password">Password</label>
-                            <input type="password" class="form-control" id="password" name="password" value="302536">
+                            <input type="password" class="form-control" id="password" name="password">
                         </div>
                     </div>
 
