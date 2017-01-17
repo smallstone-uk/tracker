@@ -2,6 +2,6 @@ component
 {
     public any function init()
     {
-        return true;
+        return !auth().guest();
     }
 }

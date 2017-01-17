@@ -1,10 +1,3 @@
-<cfscript>
-    // user = new App.User(1);
-    // auth().login(user);
-    writeDump(session);
-    writeDump(auth().guest());
-</cfscript>
-
 <cfoutput>
     <!DOCTYPE html>
     <html>
@@ -20,9 +13,12 @@
                 });
             </script>
 
-            <cfset includeView('layouts.nav')>
+            <cfif structFindDefault(variables, 'nav', true)>
+                <cfset includeView('layouts.nav')>
+            </cfif>
+
             <cfset includeView('modals.create-project')>
-            
+
             <div class="container">
                 #includeContent()#
             </div>

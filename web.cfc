@@ -3,11 +3,12 @@ component
     public any function init()
     {
         route().middleware('user')
-            .get('/settings', 'user.settings');
+            .get('/project/{id}', 'ProjectController@index')
+            .get('/logout', 'AuthController@logout');
 
         route()
             .get('/', 'CommonController@index')
-            .get('/project/{id}', 'ProjectController@index')
-            .get('/user', 'user.index');
+            .get('/login', 'AuthController@index')
+            .post('/login', 'AuthController@login');
     }
 }

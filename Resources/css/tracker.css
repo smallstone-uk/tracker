@@ -31,3 +31,7 @@
 * {outline: 0 !important;}
 
 .btn-icon {padding: 6px 10px;}
+
+.togglebutton label .toggle {
+    margin-left: 10px;
+}

@@ -24,6 +24,7 @@
                 <div class="modal-body">
                     <form class="form create-header-form" method="post">
                         <input type="hidden" name="projectID" value="#project.id#">
+                        <input type="hidden" name="userID" value="#auth().user().id#">
 
                         <div class="form-group label-floating">
                             <label class="control-label" for="focusedInput1">Title</label>

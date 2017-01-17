@@ -21,6 +21,7 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="javascript:void(0)" data-toggle="modal" data-target="##create-project-modal">New Project</a></li>
+                    <li><a href="#getUrl('/logout')#">Logout</a></li>
                 </ul>
             </div>
         </div>
