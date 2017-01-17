@@ -1,4 +1,4 @@
-component extends = "App.Framework.AuthController"
+component extends = "App.Framework.Auth.Controller"
 {
     /**
      * Shows the login form.
@@ -9,6 +9,19 @@ component extends = "App.Framework.AuthController"
     {
         return view('layouts.index|user.login', {
             'title' = 'Login',
+            'nav' = false
+        });
+    }
+
+    /**
+     * Shows the register form.
+     *
+     * @return any
+     */
+    public any function signup()
+    {
+        return view('layouts.index|user.register', {
+            'title' = 'Register',
             'nav' = false
         });
     }
@@ -47,6 +60,21 @@ component extends = "App.Framework.AuthController"
     {
         auth().logout();
         redirect().to('/login');
+    }
+
+    /**
+     * Registers the new user.
+     *
+     * @return any
+     */
+    public any function register()
+    {
+        try {
+            new App.User().save(form);
+            redirect().to('/login');
+        } catch (any error) {
+            redirect().to('/register');
+        }
     }
 
     /**

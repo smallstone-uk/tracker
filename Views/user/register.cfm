@@ -3,10 +3,10 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Login</h4>
+                    <h4 class="modal-title">Register</h4>
                 </div>
 
-                <form method="post" action="#getUrl('/login')#">
+                <form method="post" action="#getUrl('/register')#">
                     <div class="modal-body">
                         <div class="form-group label-floating">
                             <label class="control-label" for="username">Username</label>
@@ -20,16 +20,7 @@
                     </div>
 
                     <div class="modal-footer">
-                        <a href="#getUrl('/register')#" class="pull-left ml-3">I don't have an account</a>
-
-                        <input type="submit" class="btn btn-primary btn-raised pull-right" value="Login">
-
-                        <div class="togglebutton pull-right">
-                            <label>
-                                Remember me
-                                <input type="checkbox" name="remember_me">
-                            </label>
-                        </div>
+                        <input type="submit" class="btn btn-primary btn-raised pull-right" value="Register">
                     </div>
                 </form>
             </div>

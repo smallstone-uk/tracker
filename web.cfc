@@ -9,6 +9,8 @@ component
         route()
             .get('/', 'CommonController@index')
             .get('/login', 'AuthController@index')
-            .post('/login', 'AuthController@login');
+            .post('/login', 'AuthController@login')
+            .get('/register', 'AuthController@signup')
+            .post('/register', 'AuthController@register');
     }
 }

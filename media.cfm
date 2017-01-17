@@ -1,0 +1,5 @@
+<cfscript>
+    writeDump(
+        media()
+    );
+</cfscript>
