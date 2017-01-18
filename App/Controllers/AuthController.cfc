@@ -1,4 +1,4 @@
-component extends = "App.Framework.Auth.Controller"
+component extends = "App.Framework.AuthController"
 {
     /**
      * Shows the login form.
