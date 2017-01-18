@@ -19,8 +19,8 @@
                         </div>
                     </div>
 
-                    <div class="modal-footer">
-                        <a href="#getUrl('/register')#" class="pull-left ml-3">I don't have an account</a>
+                    <div class="modal-footer modal-even">
+                        <a href="#getUrl('/register')#" class="pull-left">I don't have an account</a>
 
                         <input type="submit" class="btn btn-primary btn-raised pull-right" value="Login">
 

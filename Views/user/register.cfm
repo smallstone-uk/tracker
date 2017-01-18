@@ -19,7 +19,9 @@
                         </div>
                     </div>
 
-                    <div class="modal-footer">
+                    <div class="modal-footer modal-even">
+                        <a href="#getUrl('/login')#" class="pull-left">Use existing account</a>
+
                         <input type="submit" class="btn btn-primary btn-raised pull-right" value="Register">
                     </div>
                 </form>

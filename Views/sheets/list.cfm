@@ -29,9 +29,9 @@
                 <cfloop array="#s.items()#" index="i">
                     <tr>
                         <td>
-                            #i.comment#
+                            <p style="margin: 0;width: 90%;float: left;word-break: break-word;">#i.comment#</p>
                             <cfif NOT hideControls>
-                                <button type="button" class="btn btn-sm btn-danger pull-right ctrl-delete-item" data-id="#i.id#">Delete</button>
+                                <button type="button" style="width: 10%;" class="btn btn-sm btn-danger pull-right ctrl-delete-item" data-id="#i.id#">Delete</button>
                             </cfif>
                         </td>
 

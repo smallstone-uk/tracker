@@ -35,3 +35,7 @@
 .togglebutton label .toggle {
     margin-left: 10px;
 }
+
+.modal-even {
+    padding: 0 24px 24px 24px !important;
+}
