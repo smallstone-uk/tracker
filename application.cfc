@@ -14,6 +14,8 @@ component extends = "App.Framework.App"
             'dataDirectory' = getCurrentPath('..\data\'),
             'baseDirectory' = getCurrentPath()
         };
+        
+        super.onApplicationStart();
 
         return true;
     }
