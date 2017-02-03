@@ -10,9 +10,9 @@ component extends = "App.Framework.Controller"
      *
      * @return any
      */
-    public any function index(struct params = {})
+    public any function index(required numeric id)
     {
-        var project = new App.Project(params.id);
+        var project = new App.Project(id);
 
         return view('layouts.index|project.index', {
             'title' = project.name,
@@ -27,9 +27,9 @@ component extends = "App.Framework.Controller"
      *
      * @return any
      */
-    public any function sheetList(struct params)
+    public any function sheetList()
     {
-        var project = new App.Project(params.id);
+        var project = new App.Project(form.id);
         
         return view('sheets.list', {
             'project' = project,

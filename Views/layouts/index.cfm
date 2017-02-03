@@ -20,7 +20,7 @@
             <cfset includeView('modals.create-project')>
 
             <div class="container">
-                #includeContent()#
+                #includeViewContent()#
             </div>
         </body>
     </html>
