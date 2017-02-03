@@ -41,7 +41,7 @@
                 </cfloop>
 
                 <tr>
-                    <td style="font-weight: bold" align="right" width="150" colspan="3">&pound;#s.employeeTotal()#</td>
+                    <td style="font-weight: bold" align="right" width="150" colspan="3">&pound;#decimalFormat(s.employeeTotal())#</td>
                 </tr>
             </table>
         </div>

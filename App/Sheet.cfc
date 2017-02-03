@@ -51,7 +51,7 @@ component extends = "Framework.Model"
             total += item.durationInHours() * this.employeeRate;
         }
 
-        return decimalFormat(total);
+        return total;
     }
 
     /**
@@ -67,7 +67,7 @@ component extends = "Framework.Model"
             total += item.durationInHours() * this.clientRate;
         }
 
-        return decimalFormat(total);
+        return total;
     }
 
     /**
