@@ -26,7 +26,11 @@
             </cfif>
 
             <table class="table table-bordered">
+                <cfset totalHours = 0>
+
                 <cfloop array="#s.items()#" index="i">
+                    <cfset totalHours += i.durationInHours()>
+
                     <tr>
                         <td>
                             <p style="margin: 0;width: 90%;float: left;word-break: break-word;">#i.comment#</p>
@@ -41,7 +45,8 @@
                 </cfloop>
 
                 <tr>
-                    <td style="font-weight: bold" align="right" width="150" colspan="3">&pound;#decimalFormat(s.employeeTotal())#</td>
+                    <td style="font-weight: bold" align="right" width="150" colspan="2">#totalHours# hours &times; &pound;#s.employeeRate#</td>
+                    <td style="font-weight: bold" align="right" width="150">&pound;#decimalFormat(s.employeeTotal())#</td>
                 </tr>
             </table>
         </div>
